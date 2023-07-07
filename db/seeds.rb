@@ -10,13 +10,13 @@ io_gavin = User.create(email: 'io@example.com', name: "Io Gavin Hernando", passw
 ara = User.create(email: 'ara@example.com', name: "Ara Hernando", password: 'password', password_confirmation: 'password')
 
 10.times do |x|
-  Post.create(title: "Title #{x}", body: "Body #{x} Words go here Idk", user_id: ara)
+  Post.create(title: "Title of Blog #{x}", body: "Body #{x} Words go here Idk", user_id: ara.id)
 end
 
 10.times do |x|
-  Post.create(title: "Title #{x}", body: "Body #{x + 10} Words go here Idk", user_id: io_gavin)
+  Post.create(title: "Title of Story #{x}", body: "Body #{x + 10} Words go here Idk", user_id: io_gavin.id)
 end
 
 10.times do |x|
-  Post.create(title: "Title #{x}", body: "Body #{x + 20} Words go here Idk", user_id: nerwin)
+  Post.create(title: "Title of Jokes #{x}", body: "Body #{x + 20} Words go here Idk", user_id: nerwin.id)
 end
